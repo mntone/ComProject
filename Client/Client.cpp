@@ -23,27 +23,24 @@ int wmain( int /*argc*/, wchar_t* /*argv*/[] )
 		{
 			CComPtr<IClassFactory> factory;
 			hr = fnDllGetClassObject( std::get<1>( dll ), IID_IClassFactory, reinterpret_cast<void**>( &factory ) );
-			if( FAILED( hr ) )
+			if( SUCCEEDED( hr ) )
 			{
-				FreeLibrary( module );
-				return 1;
+				CComPtr<ISample> sample;
+				hr = factory->CreateInstance( nullptr, IID_ISample, reinterpret_cast<void**>( &sample ) );
+				if( SUCCEEDED( hr ) )
+				{
+					{
+						CComBSTR pluginName;
+						sample->get_PluginName( &pluginName );
+						std::wcout << pluginName.m_str << std::endl;
+					}
+					{
+						int ans;
+						sample->Add( 1, 2, &ans );
+						std::wcout << ans << std::endl;
+					}
+				}
 			}
-
-			CComPtr<ISample> sample;
-			hr = factory->CreateInstance( nullptr, IID_ISample, reinterpret_cast<void**>( &sample ) );
-			if( FAILED( hr ) )
-			{
-				FreeLibrary( module );
-				return 1;
-			}
-
-			BSTR pluginName;
-			sample->get_PluginName( &pluginName );
-			std::wcout << pluginName << std::endl;
-
-			int ans;
-			sample->Add( 1, 2, &ans );
-			std::wcout << ans << std::endl;
 		}
 
 		FreeLibrary( module );
