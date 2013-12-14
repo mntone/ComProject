@@ -43,6 +43,13 @@ int wmain( int /*argc*/, wchar_t* /*argv*/[] )
 			}
 		}
 
+		LPFNCANUNLOADNOW fnDllCanUnloadNow = reinterpret_cast<LPFNCANUNLOADNOW>( GetProcAddress( module, "DllCanUnloadNow" ) );
+		hr = fnDllCanUnloadNow();
+		if( FAILED( hr ) )
+		{
+			return 1;
+		}
+
 		FreeLibrary( module );
 	}
 	std::wcout << L"--------------------" << std::endl;
