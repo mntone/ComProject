@@ -1,6 +1,5 @@
 #include "stdafx.h"
-#include "ISample_h.h"
-#include "ISample_i.c"
+#include "ISample.h"
 
 int wmain( int /*argc*/, wchar_t* /*argv*/[] )
 {

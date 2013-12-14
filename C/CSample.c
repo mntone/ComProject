@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "CSample.h"
-#include "ISample_i.c"
 
 ISampleVtbl CSample_vtable =
 {

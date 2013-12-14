@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "CppSample.h"
-#include "ISample_i.c"
 
 CppSample::CppSample()
 	: reference_count_( 0 )
