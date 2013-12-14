@@ -1,0 +1,15 @@
+import "oaidl.idl";
+import "ocidl.idl";
+import "unknwn.idl";
+
+[uuid( 40FEEB47-8D31-44D4-8B79-6C524A6A8113 )]
+library MntoneSample
+{
+	[object]
+	[uuid( F4D0A337-0012-4597-9912-F91954F1F8D7 )]
+	interface ISample: IUnknown
+	{
+		HRESULT Add( [in] int x, [in] int y, [out, retval] int* z );
+		[propget] HRESULT PluginName( [out, retval] BSTR* pluginName );
+	}
+}

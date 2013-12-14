@@ -1,0 +1,12 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[uuid( FB221670-F859-40B0-AA91-D37C05201C3B )]
+library MntoneCppSample
+{
+	[uuid( 042743DB-068C-4F29-B8AA-876B7DD87909 )]
+	coclass CppSampleFactory
+	{
+		[default] interface IClassFactory;
+	}
+}

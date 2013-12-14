@@ -1,0 +1,12 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[uuid( E24C7757-3780-465C-85AA-D4561190AEE1 )]
+library MntoneCSample
+{
+	[uuid( 6B6055DF-A1D9-42D9-BE0A-7D9489CF5323 )]
+	coclass CSampleFactory
+	{
+		[default] interface IClassFactory;
+	}
+}

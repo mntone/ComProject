@@ -1,0 +1,13 @@
+import "oaidl.idl";
+import "ocidl.idl";
+import "ISample.idl";
+
+[uuid( E24C7757-3780-465C-85AA-D4561190AEE1 )]
+library MntoneCSample
+{
+	[uuid( AFB2701E-4E90-4A26-B6C1-3E307014DF9D )]
+	coclass CSample
+	{
+		[default] interface ISample;
+	}
+}

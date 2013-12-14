@@ -1,0 +1,5 @@
+LIBRARY	C
+
+EXPORTS 
+    DllCanUnloadNow     PRIVATE 
+    DllGetClassObject   PRIVATE

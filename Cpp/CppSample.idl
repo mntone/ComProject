@@ -1,0 +1,13 @@
+import "oaidl.idl";
+import "ocidl.idl";
+import "ISample.idl";
+
+[uuid( FB221670-F859-40B0-AA91-D37C05201C3B )]
+library MntoneCppSample
+{
+	[uuid( 25CC5E38-A6A4-45A3-B19E-8F91D3D3F80C )]
+	coclass CppSample
+	{
+		[default] interface ISample;
+	}
+}

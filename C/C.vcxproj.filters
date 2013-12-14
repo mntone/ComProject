@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="stdafx.c" />
+    <ClCompile Include="dllmain.c" />
+    <ClCompile Include="CSampleFactory.c" />
+    <ClCompile Include="CSample.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="CSampleFactory.h" />
+    <ClInclude Include="CSample.h" />
+    <ClInclude Include="ISample.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="CSampleFactory.idl" />
+    <Midl Include="CSample.idl" />
+    <Midl Include="ISample.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSample.def" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+/Debug
+/Release
+/*/Debug
+/*/Release
+/ipch
+*.opensdf
+*.sdf
+*.suo
+*.vcxproj.user
+*_h.h
+*_i.c
+*_p.c
+dlldata.c
